@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  backup_server:
+    container_name: mc_marc_backup_server
+    build: .
+    image: backup_server:latest
+    ports:
+      - "6783:6783"
+    volumes:
+      - /home/marc/backups:/app/backups
+      - /home/marc/logs:/app/logs
+      - /home/marc/minecraft-data:/app/data
