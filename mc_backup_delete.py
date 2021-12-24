@@ -1,4 +1,3 @@
-from logging import error
 import commons
 import argparse
 import logger
@@ -66,7 +65,6 @@ def delete_old_backups(max_age: int):
 
     backups_unlinked = 0
     for entry in expired_entries:
-        log.debug(f'removing {entry.path}')
         unlink_file(entry.path)
         backups_unlinked += 1
         yield entry.path
