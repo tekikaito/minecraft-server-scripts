@@ -153,3 +153,5 @@ cython_debug/
 
 testfiles/
 minecraft-data/
+
+backup-server.docker-compose.yml
